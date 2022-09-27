@@ -21,7 +21,7 @@ public class UserRegistration {
          */
 
         boolean isPassword;
-        String mobileNumberRegex = "^[A-z a-z]{8}$";;
+        String mobileNumberRegex = "^[A-Z]{1}[a-z]{7,}$";;
         Pattern obj = Pattern.compile(mobileNumberRegex);
         Matcher matcherObj = obj.matcher(password);
         isPassword =  matcherObj.matches();
