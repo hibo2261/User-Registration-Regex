@@ -1,16 +1,9 @@
 package com.bridgelabz;
-/**
- *
- */
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class UserRegistration {
-    /**
-     *
-     * @param password:input from the user
-     */
+
 
     public static void toCheckPasswordValidation(String password){
         /**
@@ -21,15 +14,15 @@ public class UserRegistration {
          */
 
         boolean isPassword;
-        String mobileNumberRegex = "^[A-z a-z]{8,}@[0-9]+$";;
+        String mobileNumberRegex = "^[A-Z a-z]{5}@[0-9]+$";;
         Pattern obj = Pattern.compile(mobileNumberRegex);
         Matcher matcherObj = obj.matcher(password);
         isPassword =  matcherObj.matches();
 
         if(isPassword)
-            System.out.println(password+" is a Valid  password.\n");
+            System.out.println(password+" is a Valid  password\n");
         else
-            System.out.println(password+" is a Invalid  password.");
+            System.out.println(password+" is a Invalid  password");
 
     }
 }
